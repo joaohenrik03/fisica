@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabalho final de física</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="./assets/fonts/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+
+      <a class="logo" href="#">Engenharia de <span>Software</span></a>
+
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">Inicio</a></li>
+          <li><a class="title" href="#about">Resumo</a></li>
+          <li><a class="title" href="#formula">Fórmula</a></li>
+          <li><a class="title" href="#form">Calcular</a></li>
+        </ul>
+      </div>
+
+      <div class="icon-menu toggle"></div>
+      <div class="icon-close toggle"></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="home">
+      <div class="container grid">
+
+        <div class="image">
+          <img src="/assets/images/Screenshot_1.png" alt="Gráfico Corpo Suspenso" />
+        </div>
+
+        <div class="text">
+          <h2 class="title">
+            Corpo Suspenso
+          </h2>
+          <p>
+            Em física, um corpo suspenso é um corpo que pode ser usado para tracionar outro corpo
+          </p>
+          <a class="button" href="#about">Iniciar apresentação</a>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider-1"></div>
+
+    <section class="section" id="about">
+      <div class="container grid">
+
+        <div class="image">
+          <img src="./assets/images/Screenshot_2.png" alt="Gráfico Corpo Suspenso" />
+        </div>
+
+        <div class="text">
+          <h2 class="title">
+            Resumo
+          </h2>
+          <p>
+            A tensão em um corpo suspenso é a força nos fios que mantém o objeto em equilíbrio. O corpo está preso por
+            dois fios, formando ângulos θ1 e θ2 com a horizontal, e o sistema está em equilíbrio, ou seja, a soma das
+            forças verticais e horizontais é zero.
+          </p>
+          <br>
+          <p>
+            Forças horizontais: As componentes horizontais das tensões T1 e T2 se cancelam.
+            Forças verticais: As componentes verticais das tensões somam-se para equilibrar o peso do corpo (m⋅g).
+            As tensões T1 e T2 são calculadas usando trigonometria, e os ângulos dos fios influenciam diretamente os
+            valores das tensões: quanto maiores os ângulos, maior a tensão necessária para manter o corpo suspenso.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider-2"></div>
+
+    <section class="section" id="formula">
+      <div class="container grid">
+
+        <header>
+          <h2 class="title">
+            Fórmula
+          </h2>
+          <p class="subtitle">
+            Para calcular um sistema de corpo suspenso em equilíbrio, é necessário considerar as forças atuantes e as
+            condições de equilíbrio estático
+          </p>
+        </header>
+
+        <div class="cards grid">
+
+          <div class="card">
+            <h3 class="title">
+              M.G
+            </h3>
+            <p>
+              Onde:
+              <br />
+              m: massa do corpo (em kg).
+              <br />
+              g: aceleração da gravidade (em m/s², geralmente 9,81 m/s² na Terra).
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="title">
+              T1 E T2
+            </h3>
+            <p>
+              Tensões nas cordas (T1 e T2): Estas são as forças exercidas pelas cordas em equilíbrio.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="title">
+              θ1 e θ2
+            </h3>
+            <p>
+              Ângulos (θ1 e θ2): São os ângulos que as cordas formam com a horizontal.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-1"></div>
+
+    <section class="form" id="form">
+      <div class="container grid">
+        <div class="calc-container">
+          <h1 class="title">Calculadora</h1>
+
+          <div class="calc-inputs">
+            <label for="mass">Massa (kg):</label>
+            <input type="number" id="mass"><br><br>
+          </div>
+
+          <div class="calc-inputs">
+            <label for="angle1">Ângulo θ1 (graus):</label>
+            <input type="number" id="angle1"><br><br>
+          </div>
+
+          <div class="calc-inputs">
+            <label for="angle2">Ângulo θ2 (graus):</label>
+            <input type="number" id="angle2"><br><br>
+          </div>
+
+          <div class="calc-inputs">
+            <label for="gravity">Aceleração da gravidade (m/s²):</label>
+            <input type="number" id="gravity" placeholder="9.81"><br><br>
+          </div>
+
+          <button class="button calc-inputs" onclick="calculate()">Calcular</button>
+
+          <div class="calc-inputs">
+            <p id="res"></p>
+          </div>
+        </div>
+
+        <div>
+          <img src="./assets/images/Screenshot_3.png" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider-1"></div>
+  </main>
+
+  <footer class="section">
+    <div class="container grid">
+      <div class="brand">
+        <a class="logo logo-alt" href="#home">Engenharia de <span>Software</span>.</a>
+        <p>
+          Trabalho final de Física do Movimento.
+        </p>
+        <p>
+          João Henrik, Henrique Oliveski e Artur Godoy.
+        </p>
+      </div>
+
+      <div class="brand">
+        <p>
+          Trabalho do grupo 11.
+        </p>
+        <p>
+          2° Semestre, 2024.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top back-to-top-show">
+    <i class="icon-arrow-up"></i>
+  </a>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="index.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
